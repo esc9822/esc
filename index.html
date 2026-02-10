@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Minimalist Portfolio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header id="header" class="header-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <i class="fa-solid fa-moon"></i>
+            <span class="sr-only">Toggle dark mode</span>
+        </button>
+        <div class="container header-inner">
+            <img src="css/profile.JPG" alt="My Profile" class="profile-pic">
+                <div class="header-text">
+                        <h1>Edward Colon  </h1>
+                        <p id="location"><i class="fa-solid fa-location-dot"></i> Hackettstown,New Jersey</p>
+                        <p>AI Software Engineer</p>
+                        <a href="css/cv.pdf" class="btn" target="_blank">View CV</a>
+                        <a href="mailto:your.email@example.com" class="btn btn-secondary" target="_blank">Send Email</a>
+                </div>
+            
+        </div>
+    </header>
+    <div class ="main">
+        <div class="grid">
+            <div class="left">
+                <section id="about" class="box">
+                    <h2><i class="fa-solid fa-id-card"></i> About  </h2>
+                    <p>I am an aspiring AI Software Engineer with a background in IT support and growing expertise in Python and AI fundamentals. I focus on building intelligent software solutions and continuously improving my skills through hands-on projects and real-world applications.</p>
+
+                    <p>With strong problem-solving abilities and technical troubleshooting experience, I am actively transitioning into AI and software engineering. I am passionate about learning emerging technologies and contributing to innovative projects that create meaningful impact.</p>
+
+                    <p><strong>Core competencies:</strong> Python Programming • AI Fundamentals • Problem Solving • Attention to Detail • Adaptability
+                    </p>
+                </section>
+                <section id="skills" class="box">
+                    <div class="section-header-with-btn">
+                        <h2><i class="fa-solid fa-laptop-code"></i> Professional Skills </h2>
+                        <a href="all-skills.html" class="toggle-view-btn">
+                            <i class="fa-solid fa-arrow-right"></i> View All
+                        </a>
+                    </div>
+                    <div class="skills-container" id="skillsContainer">
+                        <div class="skill-category">
+                            <h3><i class="fa-solid fa-server"></i> System Administration</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Windows Server Installation & Configuration</span>
+                                <span class="skill-tag">iDRAC Server Management</span>
+                                <span class="skill-tag">Database Installation & Setup</span>
+                                <span class="skill-tag">System Performance Monitoring</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Technical Support & Troubleshooting</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Hardware Diagnostics & Repair</span>
+                                <span class="skill-tag">Network Setup</span>
+                                <span class="skill-tag">Server and POS System Configuration</span>
+                                <span class="skill-tag">Device Imaging & Deployment</span>
+                                <span class="skill-tag">Remote Technical Support</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category hidden-skill">
+                            <h3><i class="fa-solid fa-code"></i> Software Development</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Full-Stack Web Development</span>
+                                <span class="skill-tag">RESTful API Design & Integration</span>
+                                <span class="skill-tag">Version Control & Collaboration</span>
+                                <span class="skill-tag">Production Deployment & CI/CD</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category hidden-skill">
+                            <h3><i class="fa-solid fa-users"></i> Professional Competencies</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Technical Documentation</span>
+                                <span class="skill-tag">Problem-Solving & Analysis</span>
+                                <span class="skill-tag">Customer Service Excellence</span>
+                                <span class="skill-tag">Team Collaboration</span>
+                                <span class="skill-tag">Project Coordination</span>
+                                <span class="skill-tag">Adaptability</span>
+                                <span class="skill-tag">Time Management</span>
+                                <span class="skill-tag">Attention to Detail</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                 <section id="projects" class="box">
+                            <div class="section-header-with-btn">
+                                <h2> <i class="fa-solid fa-folder-open"></i> Featured Projects</h2>
+                                <a href="all-projects.html" class="toggle-view-btn">
+                                    <i class="fa-solid fa-arrow-right"></i> View All
+                                </a>
+                            </div>
+                     <div class="projects" id="projectsContainer">
+                            <div class="project-card" data-project="1">
+                                <div class="project-header">
+                                    <i class="fa-solid fa-wallet project-icon"></i>
+                                    <h3>Expense Tracker Pro</h3>
+                                </div>
+                                <p class="project-summary">Full-stack expense tracking app with multi-currency support, real-time analytics, and budget monitoring.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">Bootstrap</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="view-details-btn" onclick="openProjectModal(1)">
+                                        <i class="fa-solid fa-eye"></i> View Details
+                                    </button>
+                                    <a href="https://expensestracker-esc.onrender.com" target="_blank" class="project-link">
+                                        <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com/esc9822/expensestracker" target="_blank" class="project-link">
+                                        <i class="fa-brands fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card hidden-project" data-project="2">
+                                <div class="project-header">
+                                    <i class="fa-solid fa-code project-icon"></i>
+                                    <h3>Project Coming Soon</h3>
+                                </div>
+                                <p class="project-summary">Next exciting project in development. Stay tuned for updates!</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">TBD</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="view-details-btn disabled" disabled>
+                                        <i class="fa-solid fa-clock"></i> Coming Soon
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="project-card hidden-project" data-project="3">
+                                <div class="project-header">
+                                    <i class="fa-solid fa-lightbulb project-icon"></i>
+                                    <h3>Project Coming Soon</h3>
+                                </div>
+                                <p class="project-summary">Another amazing project under development. Watch this space!</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">TBD</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="view-details-btn disabled" disabled>
+                                        <i class="fa-solid fa-clock"></i> Coming Soon
+                                    </button>
+                                </div>
+                            </div>
+                     </div>
+             </section>
+
+             <!-- Project Modal -->
+             <div id="projectModal" class="modal">
+                 <div class="modal-content">
+                     <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+                     <div id="modalBody"></div>
+                 </div>
+             </div>
+             <section id="techstack" class="box">
+                            <h2><i class="fa-solid fa-atom"></i> Tech Stack </h2>
+                     <div class="techstack-container">
+                            <div class="techstack-category">
+                                <h3>Front End</h3>
+                                <div class="tech-buttons">
+                                    <span class="tech-btn">HTML</span>
+                                    <span class="tech-btn">CSS</span>
+                                    <span class="tech-btn">JavaScript</span>
+                                    <span class="tech-btn">Figma</span>
+                                </div>
+                            </div>
+                            <div class="techstack-category">
+                                <h3>Back End</h3>
+                                <div class="tech-buttons">
+                                    <span class="tech-btn">Python</span>
+                                    <span class="tech-btn">PHP</span>
+                                    <span class="tech-btn">MySQL</span>
+                                    <span class="tech-btn">SQLite3</span>
+                                     <span class="tech-btn">Flask</span>
+                                </div>
+                            </div>
+                             <div class="techstack-category">
+                                <h3>Developer Tools</h3>
+                                <div class="tech-buttons">
+                                    <span class="tech-btn">VS Code</span>
+                                    <span class="tech-btn">Pycharm</span>
+                                    <span class="tech-btn">Teams</span>
+                                    <span class="tech-btn">Discord</span>
+                                    <span class="tech-btn">Github</span> 
+                                </div>
+                            </div>
+                             <div class="techstack-category">
+                                <h3>CMS & No-Code</h3>
+                                <div class="tech-buttons">
+                                    <span class="tech-btn">Word Press</span>
+                                  
+                                </div>
+                            </div>
+
+                     </div>
+             </section>
+            </div>
+            <div class="right">
+                <section id="Experienced" class="box">
+                    <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+                    <div class="timeline-row">
+                        <div class="content-box current">
+                            <h3>IT Assistant</h3>
+                            <p class="company">Merry Heart Senior Care</p>
+                            <p class="date"><i class="fa-solid fa-calendar"></i> February 2024 - Present</p>
+                            <p class="location"><i class="fa-solid fa-map-pin"></i> Succasunna, NJ</p>
+                        </div>
+                        <div class="content-box">
+                            <h3>IT Specialist Stores Support</h3>
+                            <p class="company">Robinsons Retail Holdings Inc.</p>
+                            <p class="date"><i class="fa-solid fa-calendar"></i> January 2023 - July 2024</p>
+                            <p class="location"><i class="fa-solid fa-map-pin"></i> E. Rodriguez Jr. Avenue, Libis, Quezon City, Philippines</p>
+                        </div>
+                        <div class="content-box">
+                            <h3>IT Technical Coordinator</h3>
+                            <p class="company">Zenshin Systems Corporation</p>
+                            <p class="date"><i class="fa-solid fa-calendar"></i> August 2022 - January 2023</p>
+                            <p class="location"><i class="fa-solid fa-map-pin"></i> G. Roxas St, La Loma, Quezon City, Metro Manila, Philippines</p>
+                        </div>
+                        <div class="content-box">
+                            <h3>Customer Service Representative</h3>
+                            <p class="company">Sterling Global Call Center, Inc.</p>
+                            <p class="date"><i class="fa-solid fa-calendar"></i> September 2019 - July 2020</p>
+                            <p class="location"><i class="fa-solid fa-map-pin"></i> Marilao, Bulacan, Philippines</p>
+                        </div>
+                        <div class="content-box">
+                            <h3>Web development - On the Job Training</h3>
+                            <p class="company">Philippine Business Bank</p>
+                            <p class="date"><i class="fa-solid fa-calendar"></i> September 2019 - July 2020</p>
+                            <p class="location"><i class="fa-solid fa-map-pin"></i> 200 A. Mabini St., Maypajo, Caloocan City, Metro Manila</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="Certification" class="box">
+                    <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <h3>Data Camp</h3>
+                            <p class="cert-course">Introduction to Python</p>
+                            <a href="https://www.datacamp.com/statement-of-accomplishment/course/3bf30beac5eaef276265962f85fadeaa35d3899e?raw=1" target="_blank" class="cert-link">
+                                View Certificate <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>                 
+       </div>   
+       
+  
+
+
+ 
+
+    <section id="contactsection">
+
+        <div class="info-grid">
+
+            <!-- COLUMN 1 comming soon
+            <div class="info-card">
+            <h3><i class="fa-solid fa-users"></i> A member of</h3>
+
+            <a href="#">
+                Analytics & Artificial Intelligence Association of the Philippines (AAP)
+            </a>
+
+            <a href="#">
+                Philippine Software Industry Association
+            </a>
+            </div>
+            -->
+            <!-- COLUMN 2 -->
+            <div class="info-card">
+                <h3><i class="fa-solid fa-link"></i> Social Links</h3>
+
+                <a href="https://www.linkedin.com/in/edward-colon-b65b5b1ab/">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+
+                <a href="https://github.com">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+
+                <a href="https://www.instagram.com/iamkingward22/">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+
+            
+
+            <!-- COLUMN 4 -->
+            <div class="info-card">
+                <div class="mini-card">
+                    <h4><i class="fa-solid fa-envelope"></i> Email</h4>
+                    <p>Edwardcolon77@gmail.com</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4>Let’s Talk</h4>
+                    <p>Schedule a Call →</p>
+                </div>
+                
+                <div class="mini-card static">
+                    <h4><i class="fa-solid fa-bullseye"></i> Current Focus</h4>
+                    <p>learning Python</p>
+                        </div>
+            </div>
+
+            <div class="info-card">
+                <div class="mini-card">
+                    <h4><i class="fa-solid fa-bullseye"></i> Goal</h4>
+                    <p>
+                        To become a Software Engineer by continuously learning Python,
+                        building small projects, and leveraging my IT support experience
+                        to solve real-world problems.
+                    </p>
+                </div>
+                <div class="mini-card">
+                    <h4><i class="fa-solid fa-handshake"></i> What I Can Help With</h4>
+                    <p>
+                        Basic Python scripting, IT support tasks, and system troubleshooting.
+                        
+                    </p>
+                </div> 
+            </div>
+    </div>
+  </div>
+</section>
+
+    <footer>
+        <p>&copy; 2026 ESC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        const getStoredTheme = () => {
+            try {
+                return localStorage.getItem('theme');
+            } catch (e) {
+                return null;
+            }
+        };
+
+        const setStoredTheme = (theme) => {
+            try {
+                localStorage.setItem('theme', theme);
+            } catch (e) {
+                /* ignore storage errors */
+            }
+        };
+
+        const applyTheme = (theme) => {
+            root.setAttribute('data-theme', theme);
+            if (themeToggle) {
+                themeToggle.setAttribute('aria-pressed', theme === 'dark');
+                themeToggle.innerHTML = theme === 'dark'
+                    ? '<i class="fa-solid fa-sun"></i><span class="sr-only">Toggle light mode</span>'
+                    : '<i class="fa-solid fa-moon"></i><span class="sr-only">Toggle dark mode</span>';
+            }
+        };
+
+        const savedTheme = getStoredTheme();
+        applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const current = root.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                applyTheme(next);
+                setStoredTheme(next);
+            });
+        }
+    </script>
+
+    <script>
+        // Project details data
+        const projectDetails = {
+            1: {
+                title: "Full-Stack Expense Tracker with Multi-Currency Support & Real-Time Analytics",
+                icon: "fa-wallet",
+                description: "A comprehensive expense tracking application with advanced features for personal finance management.",
+                problem: [
+                    "Automated expense tracking with real-time currency conversion",
+                    "Budget monitoring with overspending alerts",
+                    "Multi-currency support for international users",
+                    "Session-based data isolation for privacy"
+                ],
+                techStack: {
+                    "Backend": "Python 3.11, Flask 3.0, SQLite3",
+                    "Frontend": "Bootstrap 5, JavaScript (Vanilla)",
+                    "Deployment": "Render.com (production), Gunicorn WSGI server",
+                    "APIs": "Exchange Rate API integration",
+                    "Features": "Dark mode, responsive design, PDF/CSV exports"
+                },
+                keyFeatures: [
+                    "Multi-Currency System - 5+ currencies with live exchange rates",
+                    "Budget Tracking - Real-time spending alerts and percentage tracking",
+                    "Bill Management - Due date tracking with overdue notifications",
+                    "Visual Reports - Category breakdown and monthly trends",
+                    "Data Export - PDF reports and CSV downloads",
+                    "Dark Mode - Theme persistence across sessions",
+                    "Responsive Design - Mobile-first Bootstrap interface",
+                    "Per-Browser Isolation - Unique session management using UUID"
+                ],
+                achievements: [
+                    "Database migration system for schema updates",
+                    "RESTful API design patterns",
+                    "Session-based authentication system",
+                    "Automated currency rate caching",
+                    "SQL injection prevention with parameterized queries",
+                    "Error handling and fallback mechanisms",
+                    "Production WSGI deployment with Gunicorn"
+                ],
+                impact: [
+                    "Zero-downtime deployments with automated CI/CD",
+                    "<500ms page load times",
+                    "100% mobile responsive",
+                    "Secure per-user data isolation"
+                ],
+                links: {
+                    demo: "https://expensestracker-esc.onrender.com",
+                    github: "https://github.com/esc9822/expensestracker"
+                }
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const modalBody = document.getElementById('modalBody');
+            const project = projectDetails[projectId];
+
+            if (!project) return;
+
+            modalBody.innerHTML = `
+                <div class="modal-project-header">
+                    <i class="fa-solid ${project.icon} modal-project-icon"></i>
+                    <h2>${project.title}</h2>
+                </div>
+                <p class="modal-description">${project.description}</p>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-bullseye"></i> Problem Solved</h3>
+                    <ul>
+                        ${project.problem.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-layer-group"></i> Technical Stack</h3>
+                    <div class="tech-stack-grid">
+                        ${Object.entries(project.techStack).map(([key, value]) => `
+                            <div class="tech-item">
+                                <strong>${key}:</strong> ${value}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-rocket"></i> Key Features</h3>
+                    <ul>
+                        ${project.keyFeatures.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-wrench"></i> Technical Achievements</h3>
+                    <ul>
+                        ${project.achievements.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-chart-line"></i> Impact & Results</h3>
+                    <ul>
+                        ${project.impact.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-links">
+                    <a href="${project.links.demo}" target="_blank" class="modal-btn">
+                        <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                    </a>
+                    <a href="${project.links.github}" target="_blank" class="modal-btn modal-btn-secondary">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target === modal) {
+                closeProjectModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+    </script>
+   
+
+</body>
+</html>
