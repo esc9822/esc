@@ -1041,7 +1041,22 @@
             font-size: 12px;
             padding: 8px 10px;
             border: 1px solid var(--border);
-            border-radius: 6px;
+            border-radius: 6px;            .info-grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: stretch;   /* <-- ITO ANG DAHILAN BAKIT NAGING PANTAY ANG HEIGHT */
+            }            .info-grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: stretch;   /* <-- ITO ANG DAHILAN BAKIT NAGING PANTAY ANG HEIGHT */
+            }            .info-grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                align-items: stretch;   /* <-- ITO ANG DAHILAN BAKIT NAGING PANTAY ANG HEIGHT */
+            }
             transition: all 0.3s ease;
             text-align: center;
         }
@@ -1125,6 +1140,7 @@
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
+  
     }
 
     .info-card {
@@ -1134,6 +1150,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    cursor: default;
     }
 
     .info-card h3 {
@@ -1142,6 +1159,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: default;
     }
 
     .info-card a {
@@ -1207,7 +1225,7 @@
 
     /* HOVER EFFECT */
     .item:hover,
-    .mini-card:hover {
+    a.mini-card:hover {
     background: var(--hover-bg);
     border-color: var(--hover-border);
     transform: translateY(-2px);
@@ -1231,8 +1249,12 @@
     color: var(--muted);
     }
     .item,
-    .mini-card {
+    a.mini-card {
     cursor: pointer;
+    }
+    
+    div.mini-card {
+    cursor: default;
     }
     @media (max-width: 1024px) {
     .info-grid {
